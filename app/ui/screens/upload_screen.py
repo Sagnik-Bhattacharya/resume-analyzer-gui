@@ -54,6 +54,13 @@ class UploadScreen(ctk.CTkFrame):
             font=("Segoe UI", 14, "bold")
         )
         self.upload_btn.pack(pady=10)
+        
+        self.history_btn = ctk.CTkButton(
+            container,
+            text="View Resume History",
+            command=self.show_history  # ✅ this now points to a proper method
+        )
+        self.history_btn.pack(pady=10)
 
         # File info label
         self.file_label = ctk.CTkLabel(
@@ -79,6 +86,9 @@ class UploadScreen(ctk.CTkFrame):
         self.analyze_btn.pack(pady=30)
 
     # ---------------- CHOOSE FILE ----------------
+    def show_history(self):
+        self.master.show_history_screen()  # This is now a proper class method
+        
     def choose_file(self):
         file_path = filedialog.askopenfilename(
             filetypes=[("Resume Files", "*.pdf *.docx")]
@@ -144,7 +154,8 @@ class UploadScreen(ctk.CTkFrame):
             filename=analysis_data["filename"],
             skills=skills,
             score_data=score_data,
-            similarity=similarity
+            similarity=similarity,
+            filepath=analysis_data["filepath"]
         )
 
         # Switch screen to results

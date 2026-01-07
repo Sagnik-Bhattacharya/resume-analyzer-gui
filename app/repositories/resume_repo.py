@@ -8,5 +8,5 @@ class ResumeRepository:
     def save(self, data: dict):
         self.collection.insert_one(data)
 
-    def fetch_all(self):
+    def get_all_resumes(self):
         return list(self.collection.find().sort("created_at", -1))

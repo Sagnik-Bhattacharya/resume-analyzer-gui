@@ -3,6 +3,7 @@ from app.ui.theme import set_theme
 from app.ui.screens.upload_screen import UploadScreen
 from app.ui.screens.upload_screen import UploadScreen
 from app.ui.screens.result_screen import ResultScreen
+from app.ui.screens.history_screen import HistoryScreen
 
 class ResumeAnalyzerApp(ctk.CTk):
     def __init__(self):
@@ -26,4 +27,10 @@ class ResumeAnalyzerApp(ctk.CTk):
         if self.current_screen:
             self.current_screen.destroy()
         self.current_screen = ResultScreen(self, analysis_data)
+        self.current_screen.pack(fill="both", expand=True)
+    
+    def show_history_screen(self):
+        if self.current_screen:
+            self.current_screen.destroy()
+        self.current_screen = HistoryScreen(self)
         self.current_screen.pack(fill="both", expand=True)

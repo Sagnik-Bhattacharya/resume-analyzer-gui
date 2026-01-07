@@ -5,6 +5,7 @@ from typing import List, Dict
 @dataclass
 class ResumeAnalysis:
     filename: str
+    filepath: str
     skills: List[str]
     matched_skills: List[str]
     missing_skills: List[str]

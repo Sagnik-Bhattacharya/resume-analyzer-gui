@@ -72,6 +72,7 @@ class ResultScreen(ctk.CTkFrame):
 
     # ---------------- LOAD PREVIEW ----------------
     def load_preview(self, filepath: Path):
+        filepath = Path(filepath)
         if not filepath.exists():
             lbl = ctk.CTkLabel(self.scrollable_frame, text=f"File not found: {filepath}", font=("Segoe UI", 12))
             lbl.pack()

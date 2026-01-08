@@ -7,14 +7,23 @@
 ## 🚀 Features
 
 ✔ **Supports PDF & DOCX resumes**
+
 ✔ **Multi-page PDF preview with scroll or page mode**
+
 ✔ **Raw vs Parsed resume view toggle**
+
 ✔ **Light / Dark theme toggle**
+
 ✔ **Skill matching** against job requirements
+
 ✔ **Matched & missing skills as pill-shaped tags**
+
 ✔ **Match & similarity scores**
+
 ✔ **Local resume history** stored via MongoDB
+
 ✔ **Interactive UI** (hover effects, clean layouts)
+
 ✔ **Offline — no paid APIs required**
 
 ---

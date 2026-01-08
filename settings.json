@@ -1,0 +1,9 @@
+{
+    "theme": "dark",
+    "window": {
+        "width": 1920,
+        "height": 991
+    },
+    "resume_view": "parsed",
+    "pdf_mode": "page"
+}
